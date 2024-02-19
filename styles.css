@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --white: #ffffff;
+    --red-hat: "Red Hat Display", sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    font-family: var(--red-hat);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 400px;
+    background-color: var(--white);
+    border-radius: 16px;
+}
+
+.image img{
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+}
+
+.content{
+    padding: 26px 30px;
+}
+
+.order h1{
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+}
+
+.order p{
+    color: var(--desaturated-blue);
+    text-align: center;
+    margin: 18px 0 16px 0;
+    
+}
+
+.plan{
+    background-color: var(--very-pale-blue);
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.price{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.price h3{
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: medium;
+    margin-bottom: 5px;
+}
+
+.price p{
+    color: var(--desaturated-blue);
+}
+
+.plan button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: var(--red-hat);
+    color: var(--bright-blue);
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.plan button:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btns button{
+    width: 100%;
+    font-family: var(--red-hat);
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btns button:first-child {
+    background-color: var(--bright-blue);
+    color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.5s, ease;
+}
+
+.btns button:first-child:hover{
+    opacity: 0.7;
+}
+
+.btns button:last-child {
+    width: fit-content;
+    color: var(--desaturated-blue);
+}
+
+.btns button:last-child:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 425px){
+    .order h1 {
+        font-size: 24px;
+      }
+
+      .price {
+        gap: 8px;
+      }
+
+      .price h3 {
+        font-size: 16px;
+      }
+
+      .price p,
+  .btns button {
+    font-size: 14px;
+  }
+
+  .price img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .plan button {
+    font-size: 12px;
+  }
+
+  .content {
+    padding: 20px 24px;
+  }
+  
+}
